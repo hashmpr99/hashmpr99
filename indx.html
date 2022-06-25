@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>تکلیف css</title>
+ <style> 
+   div {
+  width: 300px;
+  height: 100px;
+  background-color: rgb(161, 50, 50);
+  border: 4px solid gray;
+}
+
+div#myDiv {
+  transform: rotate(20deg);
+}
+
+     div.ans {
+       width: 300px;
+       height: 100px;
+       background-color: rgb(9, 9, 163);
+       border: 5px solid brown;
+     }
+     
+     div#myDiv1 {
+       transform: matrix(1, -0.3, 0, 1, 0, 0);
+     }
+     
+     div#myDiv2 {
+       transform: matrix(1, 0, 0.5, 1, 150, 0);
+     }
+
+ div.qaz {
+      width: 300px;
+       height: 100px;
+       background-color: rgb(40, 119, 93);
+       border: 5px solid rgba(153, 207, 67, 0.445);
+ }
+          
+#hi {
+      transform: rotateX(150deg);
+}
+
+div.m123 {
+        width: 300px;
+       height: 100px;
+       background-color: rgb(0, 238, 255);
+       border: 5px solid rgb(247, 202, 1);
+  }
+          
+ #ok {
+      transform: rotateZ(90deg);
+ }
+
+ div#wsx {
+  width: 100px;
+  height: 100px;
+  background: rgb(0, 255, 64);
+  transition: width 4s, height 4s;
+}
+
+div#wsx:hover {
+  width: 200px;
+  height: 200px;
+}
+
+div.edc {
+  width: 100px;
+  height: 100px;
+  background: rgb(255, 123, 0);
+  transition: width 2s ;
+}
+
+#div1 {transition-timing-function: linear ;}
+#div2 {transition-timing-function: ease ;}
+#div3 {transition-timing-function: ease-in ;}
+#div4 {transition-timing-function: ease-out ;}
+#div5 {transition-timing-function: ease-in-out ;}
+
+div.edc:hover {
+  width: 300px;
+}
+
+div#rfv {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+div#rfv:hover {
+  width: 150px;
+  height: 150px;
+  transform: rotate(180deg);
+}
+
+
+div#tgb {
+  width: 100px;
+  height: 100px;
+  background-color: blak;
+  animation-name: mymovi;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+ 
+}
+
+@keyframes mymovi {
+  from {background-color: blak;}
+  to {background-color: rgb(0, 0, 0);}
+  
+}
+
+div#yhn {
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  position: relative;
+  animation: myfirst 5s linear 2s infinite alternate;
+}
+
+@keyframes myfirst {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:150px; top:0px;}
+  50%  {background-color:blue; left:150px; top:150px;}
+  75%  {background-color:green; left:0px; top:150px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+ </style>
+
+
+</head>
+<body>
+     <h1>css 2بعدی</h1>
+     <div>
+          سلام
+          </div>
+          
+          <div id="myDiv">
+          کلیک کنید
+       </div>
+          <br> <br> <br> <br>
+          
+       <div class="ans">
+            hllow
+            </div>
+               
+           <div id="myDiv1" class="ans">
+            my css
+           </div>
+               
+           <div id="myDiv2"  class="ans">
+           good morning
+       </div>
+          <br> <br> <br> <br>
+          <h1>3بعدی</h1>
+      <div class="qaz">
+           <h1> سلام  </h1>
+           </div>
+               
+           <div id="hi" class="qaz">
+           <h1> سلام  </h1>
+    </div>
+      <br> <br> <br> <br>
+   <div class="m123">
+       <h2>mojtaba</h2>
+    </div>
+               
+    <div id="ok" class="m123">
+   <h2>mojtaba</h2>
+   </div>
+    <br> <br> <br> <br>
+    <h1>CSS Transitions انتقال</h1>
+   <div id="wsx">hi</div> 
+      <br> <br>
+      <div id="div1" class="edc"><h3>linear یک افکت انتقال با همان سرعت از ابتدا تا انتها مشخص می کند</h3></div><br>
+      <div id="div2" class="edc"><h3>ease یک افکت انتقال را با شروع آهسته سپس سریع ودر  پایان آهسته می کند</h3></div><br>
+      <div id="div3" class="edc"><h3>ease-in یک اثر گذار با شروع آهسته رامشخص می کند</h3></div><br>
+      <div id="div4" class="edc"><h3>ease-out یک اثر گذار با پایان آهسته رامشخص می کند</h3></div><br>
+      <div id="div5" class="edc"><h3>ease-in-out یک افکت انتقال را با شروع و پایان آهسته رامشخص می کند</h3></div><br>
+         <br> <br> <br> <br>
+  <div id="rfv">Transition + Transformation</div>
+      <br> <br>
+     <h1>css انیمیشن</h1>
+   <div id="tgb"></div>
+    <br> <br>
+   <div id="yhn"></div>
+    <br> <br> <br> <br> <br> <br> <br> <br>
+    <hr>
+    <h1>css پایان</h1>
+</body>
+</html>
