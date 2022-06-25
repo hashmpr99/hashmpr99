@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <meat></meat> 
+  <title>ماشین حساب</title>
+  <style>
+
+table{
+  background-color: aqua;
+  transform: translate(0,40%);
+}
+
+button{
+  padding: 5px;
+  padding-right:  10px;
+  
+}
+
+
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+  <script>
+
+    $(document).ready(function(){
+      $(".number").click(function(){
+        var value1 =$(this).val();
+        var value2 =$("#ans").val();
+        $("#ans").val(value2 + value1);
+
+      });
+  
+  
+      $(".btn_ecq").click(function(){
+      $("#ans").val("");
+      });
+  
+      $(".btn_div").click(function(){
+        var value1 =$(this).val();
+        var value2 =$("#ans").val();
+        $("#ans").val(value2 + value1)
+      });
+      
+  
+      $(".btn_ecw").click(function(){
+        var value2 = eval($("#ans").val());
+        $("#ans").val(value2)
+      });
+
+
+      $(".btn_bak").click(function () {
+      var x = $("#ans").val();
+      $("#ans").val(x.slice(0, x.length - 1));
+    });
+   
+  
+  
+    });
+  
+  </script>
+  
+</head>
+
+<body>
+  <div class="asa" align="center">
+	<table border="1">
+    <tbody>
+      <tr>
+   <td colspan="5"><input type="text" class="numtxt"  id="ans"></td>
+      </tr>
+      <tr>
+        <td><button value="+" class="btn_div">+</button></td>
+        <td><button value="3" class="number">3</button></td>
+        <td><button value="2" class="number">2</button></td>
+        <td><button value="1" class="number">1</button></td>
+        
+      </tr>
+      <tr>
+        <td><button value="-" class="btn_div" >-</button></td>
+        <td><button value="6" class="number" >6</button></td>
+        <td><button value="5" class="number" >5</button></td>
+        <td><button value="4" class="number" >4</button></td>
+        
+      </tr>
+      <tr>
+        <td><button value="X" class="btn_div" >x</button></td>
+        <td><button value="9" class="number">9</button></td>
+        <td><button value="8" class="number">8</button></td>
+        <td><button value="7" class="number">7</button></td>
+        
+      </tr>
+      <tr>
+        <td><button value="/" class="btn_div ">/</button></td>
+        <td><button value="C" class="btn_ecq ">c</button></td>
+        <td><button value="0" class="number">0</button></td>
+        <td><button value="=" class="btn_ecw ">=</button></td>
+        
+      </tr>
+      <tr>
+       <td><button value="<-" class="btn_bak">&lt;&lt;</button></td>
+       <td><button value="("  class="number">(</button></td> 
+       <td><button value=")"  class="number">)</button></td>
+       <td><button value="."  class="number">.</button></td>
+      </tr>
+      
+
+   
+    </tbody>
+  </table>
+</div>
+
+
+
+ 
+ 
+</body>
+
+</html>
